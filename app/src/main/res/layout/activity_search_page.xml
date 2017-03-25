@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dion.onpoint.SearchPage">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/SearchItem"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:id="@+id/SearchforResult"
+        android:onClick="Search"
+        android:layout_below="@+id/SearchItem"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meaning"
+        android:id="@+id/Definition"
+        android:layout_below="@+id/SearchforResult"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="41dp"
+        android:onClick="goto_OxfordDict"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quotes"
+        android:id="@+id/quotes"
+        android:layout_below="@+id/Definition"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="goto_Quotes"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wikipedia"
+        android:id="@+id/wiki"
+        android:layout_below="@+id/quotes"
+        android:layout_toLeftOf="@+id/SearchforResult"
+        android:layout_toStartOf="@+id/SearchforResult"
+        android:onClick="goto_Wikipedia"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quora"
+        android:id="@+id/quora"
+        android:layout_below="@+id/wiki"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="goto_Quora"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reuters"
+        android:id="@+id/reuters"
+        android:layout_below="@+id/quora"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="goto_Reuters"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hindu"
+        android:id="@+id/hindu"
+        android:layout_below="@+id/reuters"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="goto_Hindu"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Youtube"
+        android:id="@+id/youtube"
+        android:layout_below="@+id/hindu"
+        android:layout_alignRight="@+id/wiki"
+        android:layout_alignEnd="@+id/wiki"
+        android:onClick="goto_Youtube"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="India"
+        android:id="@+id/IndiaRadio"
+        android:layout_below="@+id/SearchItem"
+        android:layout_alignLeft="@+id/wiki"
+        android:layout_alignStart="@+id/wiki"
+        android:checked="true" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="World"
+        android:id="@+id/WorldRadio"
+        android:layout_below="@+id/SearchItem"
+        android:layout_toRightOf="@+id/IndiaRadio"
+        android:layout_toEndOf="@+id/IndiaRadio"
+        android:checked="false" />
+
+
+</RelativeLayout>
