@@ -11,21 +11,49 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StartPage">
+        <activity
+            android:name=".StartPage"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SearchPage" />
-        <activity android:name=".Definition" />
-        <activity android:name=".quotes" />
-        <activity android:name=".wikipedia" />
-        <activity android:name=".quora" />
-        <activity android:name=".reuters" />
-        <activity android:name=".youtube" />
-        <activity android:name=".hindu"></activity>
+        <activity
+            android:name=".SearchPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Definition"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".quotes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wikipedia"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".quora"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reuters"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".youtube"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hindu"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".DefinitionFinal"
+            android:label="@string/title_activity_definition_final" />
+        <activity android:name=".note" />
+        <activity
+            android:name=".QuoteFinal"
+            android:label="@string/title_activity_quote_final"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

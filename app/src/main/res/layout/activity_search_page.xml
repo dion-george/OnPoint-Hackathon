@@ -7,114 +7,165 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.dion.onpoint.SearchPage">
+    tools:context="com.example.dion.onpoint.SearchPage"
+    android:background="@drawable/back">
+
+
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/SearchItem"/>
+        android:id="@+id/SearchItem"
+        android:background="@drawable/focus_border"
+        android:paddingLeft="5dp"/>
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search"
         android:id="@+id/SearchforResult"
         android:onClick="Search"
+        android:src="@drawable/search"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/SearchItem"
+        android:layout_alignBottom="@+id/SearchItem" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:layout_below="@+id/SearchItem"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="51dp" />
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="24dp">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Meaning"
-        android:id="@+id/Definition"
-        android:layout_below="@+id/SearchforResult"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="41dp"
-        android:onClick="goto_OxfordDict"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:orientation="horizontal"
+            android:layout_weight="0.63" >
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quotes"
-        android:id="@+id/quotes"
-        android:layout_below="@+id/Definition"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="goto_Quotes"/>
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/Definition"
+                android:onClick="goto_OxfordDict"
+                android:text="Meaning"
+                android:layout_margin="5dp"
+                android:background="@drawable/search_buttons"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wikipedia"
-        android:id="@+id/wiki"
-        android:layout_below="@+id/quotes"
-        android:layout_toLeftOf="@+id/SearchforResult"
-        android:layout_toStartOf="@+id/SearchforResult"
-        android:onClick="goto_Wikipedia"/>
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/quotes"
+                android:onClick="goto_Quotes"
+                android:text="Quotes"
+                android:background="@drawable/search_buttons"
+                android:layout_margin="5dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                />
+        </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quora"
-        android:id="@+id/quora"
-        android:layout_below="@+id/wiki"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="goto_Quora"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:orientation="horizontal"
+            android:layout_weight="0.65" >
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reuters"
-        android:id="@+id/reuters"
-        android:layout_below="@+id/quora"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="goto_Reuters"/>
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/reuters"
+                android:onClick="goto_Reuters"
+                android:text="Reuters"
+                android:background="@drawable/search_buttons"
+                android:layout_margin="5dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hindu"
-        android:id="@+id/hindu"
-        android:layout_below="@+id/reuters"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="goto_Hindu"/>
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/hindu"
+                android:onClick="goto_Hindu"
+                android:text="Hindu"
+                android:background="@drawable/search_buttons"
+                android:layout_margin="5dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Youtube"
-        android:id="@+id/youtube"
-        android:layout_below="@+id/hindu"
-        android:layout_alignRight="@+id/wiki"
-        android:layout_alignEnd="@+id/wiki"
-        android:onClick="goto_Youtube"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:orientation="horizontal"
+            android:layout_weight="0.65" >
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="India"
-        android:id="@+id/IndiaRadio"
-        android:layout_below="@+id/SearchItem"
-        android:layout_alignLeft="@+id/wiki"
-        android:layout_alignStart="@+id/wiki"
-        android:checked="true" />
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/wiki"
+                android:onClick="goto_Wikipedia"
+                android:text="Wikipedia"
+                android:background="@drawable/search_buttons"
+                android:layout_margin="5dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="World"
-        android:id="@+id/WorldRadio"
-        android:layout_below="@+id/SearchItem"
-        android:layout_toRightOf="@+id/IndiaRadio"
-        android:layout_toEndOf="@+id/IndiaRadio"
-        android:checked="false" />
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/quora"
+                android:onClick="goto_Quora"
+                android:background="@drawable/search_buttons"
+                android:layout_margin="5dp"
+                android:text="Quora"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:orientation="horizontal"
+            android:layout_weight="0.7" >
+
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="91dp"
+                android:layout_weight="1"
+                android:id="@+id/youtube"
+                android:onClick="goto_Youtube"
+                android:text="YouTube"
+                android:background="@drawable/search_buttons"
+                android:layout_margin="5dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 
 
 </RelativeLayout>

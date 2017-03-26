@@ -1,10 +1,14 @@
 package com.example.dion.onpoint;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class SearchPage extends AppCompatActivity {
 
@@ -19,12 +23,18 @@ public class SearchPage extends AppCompatActivity {
         SearchedItem = intent.getStringExtra("key");
         searchBar = (EditText) findViewById(R.id.SearchItem);
         searchBar.setText(SearchedItem);
+
+
     }
 
     public void Search(View view){
         if(searchBar.getText().toString()!= SearchedItem){
             SearchedItem = searchBar.getText().toString();
         }
+        InputMethodManager mgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        mgr.showSoftInput(searchBar, InputMethodManager.SHOW_IMPLICIT);
+
+        Toast.makeText(getApplicationContext(), "Search successful", Toast.LENGTH_SHORT).show();
     }
 
     public void goto_OxfordDict(View view)
@@ -63,16 +73,17 @@ public class SearchPage extends AppCompatActivity {
 
     public void goto_Hindu(View view)
     {
-        Intent intent_reuters = new Intent(SearchPage.this,hindu.class);
-        intent_reuters.putExtra("searchedItem",SearchedItem);
-        startActivity(intent_reuters);
+        Intent intent_hindu = new Intent(SearchPage.this,hindu.class);
+        intent_hindu.putExtra("searchedItem",SearchedItem);
+        startActivity(intent_hindu);
     }
 
     public void goto_Youtube(View view)
     {
-        Intent intent_reuters = new Intent(SearchPage.this,youtube.class);
-        intent_reuters.putExtra("searchedItem",SearchedItem);
-        startActivity(intent_reuters);
+        Intent intent_youtube = new Intent(SearchPage.this,youtube.class);
+        intent_youtube.putExtra("searchedItem",SearchedItem);
+        startActivity(intent_youtube);
     }
+
 
 }

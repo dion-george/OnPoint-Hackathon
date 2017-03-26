@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">OnPoint</string>
+    <string name="title_activity_notepad">notepad</string>
+    <string name="title_activity_definition_final">DefinitionFinal</string>
+    <string name="title_activity_quote_final">QuoteFinal</string>
 </resources>
