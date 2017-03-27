@@ -9,13 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.dion.onpoint.QuoteFinal"
-    tools:showIn="@layout/activity_quote_final">
-
-    <WebView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/wv"/>
-
+    tools:context="com.example.dion.onpoint.hinduFinal"
+    tools:showIn="@layout/activity_hindu_final">
 
 </RelativeLayout>

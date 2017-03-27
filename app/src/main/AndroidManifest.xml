@@ -45,7 +45,10 @@
         <activity
             android:name=".hindu"
             android:screenOrientation="portrait" />
-
+        <activity
+            android:name=".notepad"
+            android:label="@string/title_activity_notepad"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".DefinitionFinal"
             android:label="@string/title_activity_definition_final" />
@@ -53,6 +56,10 @@
         <activity
             android:name=".QuoteFinal"
             android:label="@string/title_activity_quote_final"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".hinduFinal"
+            android:label="@string/title_activity_hindu_final"
             android:theme="@style/AppTheme"></activity>
     </application>
 

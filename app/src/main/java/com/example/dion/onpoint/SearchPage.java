@@ -2,6 +2,8 @@ package com.example.dion.onpoint;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -40,7 +42,7 @@ public class SearchPage extends AppCompatActivity {
     public void goto_OxfordDict(View view)
     {
         Intent intent_def = new Intent(SearchPage.this,Definition.class);
-        intent_def.putExtra("searchedItem",SearchedItem);
+        intent_def.putExtra("searchedItem", SearchedItem);
         startActivity(intent_def);
 }
     public void goto_Quotes(View view)
@@ -85,5 +87,23 @@ public class SearchPage extends AppCompatActivity {
         startActivity(intent_youtube);
     }
 
+    public void goto_Notepad(View view)
+    {
+        Intent intent_note = new Intent(SearchPage.this,notepad.class);
+        startActivity(intent_note);
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        clear_pref();
+    }
+    public void clear_pref()
+    {
+         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.commit();
+        }
 
 }

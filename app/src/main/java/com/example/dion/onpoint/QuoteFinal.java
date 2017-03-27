@@ -1,5 +1,8 @@
 package com.example.dion.onpoint;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,6 +13,7 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 public class QuoteFinal extends AppCompatActivity {
 
@@ -60,12 +64,41 @@ public class QuoteFinal extends AppCompatActivity {
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
+            @SuppressWarnings("deprecation")
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View arg0) {
+                String pasteText;
+
+                // TODO Auto-generated method stub
+                if(sdk < android.os.Build.VERSION_CODES.HONEYCOMB){
+                    android.text.ClipboardManager clipboard = (android.text.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                    pasteText = clipboard.getText().toString();
+                    main_paste = main_paste + pasteText;
+                    main_paste = main_paste + "\n";
+                    Toast.makeText(getApplicationContext(), "Saved to Notepad", Toast.LENGTH_SHORT).show();
+                    intent.putExtra("def_copied", main_paste);
+                }else{
+                    ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                    if(clipboard.hasPrimaryClip()== true){
+                        ClipData.Item item = clipboard.getPrimaryClip().getItemAt(0);
+                        pasteText = item.getText().toString();
+                        main_paste = main_paste + pasteText;
+                        main_paste = main_paste + "\n";
+                        Toast.makeText(getApplicationContext(), "Saved to Notepad", Toast.LENGTH_SHORT).show();
+                        intent.putExtra("def_copied", main_paste);
+                    }else{
+
+                        Toast.makeText(getApplicationContext(), "Nothing to Paste", Toast.LENGTH_SHORT).show();
+
+                    }
+                }
+
+                Intent intent = new Intent(QuoteFinal.this,notepad.class);
+                startActivity(intent);
+
             }
         });
+
     }
 
 }

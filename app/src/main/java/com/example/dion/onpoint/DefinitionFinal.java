@@ -74,34 +74,34 @@ public class DefinitionFinal extends AppCompatActivity {
             @SuppressWarnings("deprecation")
             @Override
             public void onClick(View arg0) {
-//                String pasteText;
-//
-//                // TODO Auto-generated method stub
-//                if(sdk < android.os.Build.VERSION_CODES.HONEYCOMB){
-//                    android.text.ClipboardManager clipboard = (android.text.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-//                    pasteText = clipboard.getText().toString();
-//                    main_paste = main_paste + pasteText;
-//                    main_paste = main_paste + "\n";
-//                    Toast.makeText(getApplicationContext(), "Saved to Notepad", Toast.LENGTH_SHORT).show();
-//                    intent_note.putExtra("def_copied", main_paste);
-//                }else{
-//                    ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-//                    if(clipboard.hasPrimaryClip()== true){
-//                        ClipData.Item item = clipboard.getPrimaryClip().getItemAt(0);
-//                        pasteText = item.getText().toString();
-//                        main_paste = main_paste + pasteText;
-//                        main_paste = main_paste + "\n";
-//                        Toast.makeText(getApplicationContext(), "Saved to Notepad", Toast.LENGTH_SHORT).show();
-//                        intent_note.putExtra("def_copied", main_paste);
-//                    }else{
-//
-//                        Toast.makeText(getApplicationContext(), "Nothing to Paste", Toast.LENGTH_SHORT).show();
-//
-//                    }
-//}
+                String pasteText;
 
-//                Intent intent = new Intent(DefinitionFinal.this,notepad.class);
-//                startActivity(intent);
+                // TODO Auto-generated method stub
+                if(sdk < android.os.Build.VERSION_CODES.HONEYCOMB){
+                    android.text.ClipboardManager clipboard = (android.text.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                    pasteText = clipboard.getText().toString();
+                    main_paste = main_paste + pasteText;
+                    main_paste = main_paste + "\n";
+                    Toast.makeText(getApplicationContext(), "Saved to Notepad", Toast.LENGTH_SHORT).show();
+                    intent_note.putExtra("def_copied", main_paste);
+                }else{
+                    ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                    if(clipboard.hasPrimaryClip()== true){
+                        ClipData.Item item = clipboard.getPrimaryClip().getItemAt(0);
+                        pasteText = item.getText().toString();
+                        main_paste = main_paste + pasteText;
+                        main_paste = main_paste + "\n";
+                        Toast.makeText(getApplicationContext(), "Saved to Notepad", Toast.LENGTH_SHORT).show();
+                        intent_note.putExtra("def_copied", main_paste);
+                    }else{
+
+                        Toast.makeText(getApplicationContext(), "Nothing to Paste", Toast.LENGTH_SHORT).show();
+
+                    }
+}
+
+                Intent intent = new Intent(DefinitionFinal.this,notepad.class);
+                startActivity(intent);
 
                 }
         });
