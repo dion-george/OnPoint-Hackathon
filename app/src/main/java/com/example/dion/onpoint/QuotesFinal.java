@@ -60,7 +60,7 @@ public class QuotesFinal extends AppCompatActivity {
 
     public void QuoteNote(View view){
 
-        Intent intent = new Intent(QuotesFinal.this,Notepage.class);
+        Intent intent = new Intent(QuotesFinal.this,notepad.class);
         startActivity(intent);
 
     }

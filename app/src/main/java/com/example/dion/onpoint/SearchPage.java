@@ -89,7 +89,7 @@ public class SearchPage extends AppCompatActivity {
 
     public void goto_Notepad(View view)
     {
-        Intent intent_note = new Intent(SearchPage.this,Notepage.class);
+        Intent intent_note = new Intent(SearchPage.this,notepad.class);
         startActivity(intent_note);
     }
 

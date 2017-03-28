@@ -54,11 +54,15 @@ public class DefinitionFinal extends AppCompatActivity {
         wv.setWebViewClient(new WebViewClient());
 
 
+
+
+
+
     }
 
     public void DefNote(View view){
 
-        Intent intent = new Intent(DefinitionFinal.this,Notepage.class);
+        Intent intent = new Intent(DefinitionFinal.this,notepad.class);
         startActivity(intent);
 
     }

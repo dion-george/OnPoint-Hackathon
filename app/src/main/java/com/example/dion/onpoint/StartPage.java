@@ -1,6 +1,9 @@
 package com.example.dion.onpoint;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,11 +29,17 @@ public class StartPage extends AppCompatActivity {
     }
 
     public void startSearch(View view){
+
         input_String = displayInput();
         Intent intent = new Intent(StartPage.this,SearchPage.class);
         intent.putExtra("key", input_String);
         startActivity(intent);
     }
+
+
+
+
+
 
 
 

@@ -59,7 +59,7 @@ public class YoutubeFinal extends AppCompatActivity {
 
     public void YoutubeNote(View view){
 
-        Intent intent = new Intent(YoutubeFinal.this,Notepage.class);
+        Intent intent = new Intent(YoutubeFinal.this,notepad.class);
         startActivity(intent);
 
     }

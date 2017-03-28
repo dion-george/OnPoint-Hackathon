@@ -61,7 +61,7 @@ public class HinduMain extends AppCompatActivity {
 
     public void HinduNote(View view){
 
-        Intent intent = new Intent(HinduMain.this,Notepage.class);
+        Intent intent = new Intent(HinduMain.this,notepad.class);
         startActivity(intent);
 
     }

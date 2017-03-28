@@ -13,8 +13,11 @@
     tools:showIn="@layout/activity_notepad">
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/notes"/>
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:inputType="textMultiLine"
+    android:gravity="top"
+    android:id="@+id/notes"
+    android:scrollbars = "vertical"/>
 
 </LinearLayout>

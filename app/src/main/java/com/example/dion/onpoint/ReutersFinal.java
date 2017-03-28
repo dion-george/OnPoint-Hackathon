@@ -57,7 +57,7 @@ public class ReutersFinal extends AppCompatActivity {
 
     public void ReutersNote(View view){
 
-        Intent intent = new Intent(ReutersFinal.this,Notepage.class);
+        Intent intent = new Intent(ReutersFinal.this,notepad.class);
         startActivity(intent);
 
     }
