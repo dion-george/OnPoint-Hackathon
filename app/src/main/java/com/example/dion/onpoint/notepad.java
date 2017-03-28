@@ -38,8 +38,8 @@ String eg;
         //sub = loadRecord.getString("",sub);
 
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
  // intent = getIntent();
 
 

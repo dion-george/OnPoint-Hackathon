@@ -11,7 +11,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class DefinitionFinal extends AppCompatActivity {
+public class WikiFinal extends AppCompatActivity {
+
     String input;
     String final_Input;
     WebView wv;
@@ -27,16 +28,17 @@ public class DefinitionFinal extends AppCompatActivity {
         }
     }
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_definition_final);
+        setContentView(R.layout.activity_wiki_final);
+        Intent intent_wiki = getIntent();
+        input = intent_wiki.getStringExtra("searchedItem");
 
-        Intent intent_def = getIntent();
-        input = intent_def.getStringExtra("searchedItem");
-
-        input = input.replaceAll(" ", "+").toLowerCase();
-        final_Input = "https://en.oxforddictionaries.com/definition/" + input;
+        input = input.replaceAll(" ", "_").toLowerCase();
+        final_Input = "https://en.wikipedia.org/wiki/" + input;
         wv = (WebView) findViewById(R.id.wv);
         // enable javascript
         wv.getSettings().setJavaScriptEnabled(true);
@@ -53,12 +55,11 @@ public class DefinitionFinal extends AppCompatActivity {
         wv.loadUrl(final_Input);
         wv.setWebViewClient(new WebViewClient());
 
-
     }
 
-    public void DefNote(View view){
+    public void WikiNote(View view){
 
-        Intent intent = new Intent(DefinitionFinal.this,Notepage.class);
+        Intent intent = new Intent(WikiFinal.this,Notepage.class);
         startActivity(intent);
 
     }

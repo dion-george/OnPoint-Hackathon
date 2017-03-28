@@ -41,55 +41,55 @@ public class SearchPage extends AppCompatActivity {
 
     public void goto_OxfordDict(View view)
     {
-        Intent intent_def = new Intent(SearchPage.this,Definition.class);
+        Intent intent_def = new Intent(SearchPage.this,DefinitionFinal.class);
         intent_def.putExtra("searchedItem", SearchedItem);
         startActivity(intent_def);
 }
     public void goto_Quotes(View view)
     {
-        Intent intent_quote = new Intent(SearchPage.this,quotes.class);
+        Intent intent_quote = new Intent(SearchPage.this,QuotesFinal.class);
         intent_quote.putExtra("searchedItem",SearchedItem);
         startActivity(intent_quote);
     }
 
     public void goto_Wikipedia(View view)
     {
-        Intent intent_wiki = new Intent(SearchPage.this,wikipedia.class);
+        Intent intent_wiki = new Intent(SearchPage.this,WikiFinal.class);
         intent_wiki.putExtra("searchedItem",SearchedItem);
         startActivity(intent_wiki);
     }
 
     public void goto_Quora(View view)
     {
-        Intent intent_quora = new Intent(SearchPage.this,quora.class);
+        Intent intent_quora = new Intent(SearchPage.this,QuoraFinal.class);
         intent_quora.putExtra("searchedItem",SearchedItem);
         startActivity(intent_quora);
     }
 
     public void goto_Reuters(View view)
     {
-        Intent intent_reuters = new Intent(SearchPage.this,reuters.class);
+        Intent intent_reuters = new Intent(SearchPage.this,ReutersFinal.class);
         intent_reuters.putExtra("searchedItem",SearchedItem);
         startActivity(intent_reuters);
     }
 
     public void goto_Hindu(View view)
     {
-        Intent intent_hindu = new Intent(SearchPage.this,hindu.class);
+        Intent intent_hindu = new Intent(SearchPage.this,HinduMain.class);
         intent_hindu.putExtra("searchedItem",SearchedItem);
         startActivity(intent_hindu);
     }
 
     public void goto_Youtube(View view)
     {
-        Intent intent_youtube = new Intent(SearchPage.this,youtube.class);
+        Intent intent_youtube = new Intent(SearchPage.this,YoutubeFinal.class);
         intent_youtube.putExtra("searchedItem",SearchedItem);
         startActivity(intent_youtube);
     }
 
     public void goto_Notepad(View view)
     {
-        Intent intent_note = new Intent(SearchPage.this,notepad.class);
+        Intent intent_note = new Intent(SearchPage.this,Notepage.class);
         startActivity(intent_note);
     }
 

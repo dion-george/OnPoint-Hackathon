@@ -265,7 +265,7 @@
                         android:id="@+id/notepad"
                         android:onClick="goto_Notepad"
                         android:background="@drawable/search_buttons"
-                        android:text="notead"
+                        android:text="notepad"
                         android:textSize="20sp"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold"

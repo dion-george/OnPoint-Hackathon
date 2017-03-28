@@ -31,4 +31,7 @@ public class StartPage extends AppCompatActivity {
         intent.putExtra("key", input_String);
         startActivity(intent);
     }
+
+
+
 }

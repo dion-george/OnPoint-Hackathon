@@ -11,7 +11,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class DefinitionFinal extends AppCompatActivity {
+public class ReutersFinal extends AppCompatActivity {
+
     String input;
     String final_Input;
     WebView wv;
@@ -30,13 +31,13 @@ public class DefinitionFinal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_definition_final);
+        setContentView(R.layout.activity_reuters_final);
 
-        Intent intent_def = getIntent();
-        input = intent_def.getStringExtra("searchedItem");
+        Intent intent_reuters = getIntent();
+        input = intent_reuters.getStringExtra("searchedItem");
 
         input = input.replaceAll(" ", "+").toLowerCase();
-        final_Input = "https://en.oxforddictionaries.com/definition/" + input;
+        final_Input = "http://www.reuters.com/search/news?sortBy=&dateRange=&blob=" + input;
         wv = (WebView) findViewById(R.id.wv);
         // enable javascript
         wv.getSettings().setJavaScriptEnabled(true);
@@ -49,19 +50,16 @@ public class DefinitionFinal extends AppCompatActivity {
         wv.getSettings().setDatabaseEnabled(true);
         wv.getSettings().setAppCacheEnabled(true);
         wv.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-
         wv.loadUrl(final_Input);
         wv.setWebViewClient(new WebViewClient());
 
-
     }
 
-    public void DefNote(View view){
+    public void ReutersNote(View view){
 
-        Intent intent = new Intent(DefinitionFinal.this,Notepage.class);
+        Intent intent = new Intent(ReutersFinal.this,Notepage.class);
         startActivity(intent);
 
     }
-
 
 }

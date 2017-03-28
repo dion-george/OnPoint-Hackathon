@@ -11,7 +11,9 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class DefinitionFinal extends AppCompatActivity {
+public class QuotesFinal extends AppCompatActivity {
+
+
     String input;
     String final_Input;
     WebView wv;
@@ -27,16 +29,17 @@ public class DefinitionFinal extends AppCompatActivity {
         }
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_definition_final);
+        setContentView(R.layout.activity_quotes_final);
 
-        Intent intent_def = getIntent();
-        input = intent_def.getStringExtra("searchedItem");
+        Intent intent_quotes = getIntent();
+        input = intent_quotes.getStringExtra("searchedItem");
 
         input = input.replaceAll(" ", "+").toLowerCase();
-        final_Input = "https://en.oxforddictionaries.com/definition/" + input;
+        final_Input = "https://www.brainyquote.com/search_results.html?q=" + input;
         wv = (WebView) findViewById(R.id.wv);
         // enable javascript
         wv.getSettings().setJavaScriptEnabled(true);
@@ -53,15 +56,13 @@ public class DefinitionFinal extends AppCompatActivity {
         wv.loadUrl(final_Input);
         wv.setWebViewClient(new WebViewClient());
 
-
     }
 
-    public void DefNote(View view){
+    public void QuoteNote(View view){
 
-        Intent intent = new Intent(DefinitionFinal.this,Notepage.class);
+        Intent intent = new Intent(QuotesFinal.this,Notepage.class);
         startActivity(intent);
 
     }
-
 
 }

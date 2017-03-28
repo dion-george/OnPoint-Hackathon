@@ -11,7 +11,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class DefinitionFinal extends AppCompatActivity {
+public class HinduMain extends AppCompatActivity {
+
     String input;
     String final_Input;
     WebView wv;
@@ -27,16 +28,18 @@ public class DefinitionFinal extends AppCompatActivity {
         }
     }
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_definition_final);
-
-        Intent intent_def = getIntent();
-        input = intent_def.getStringExtra("searchedItem");
+        setContentView(R.layout.activity_hindu_main);
+        Intent intent_hindu = getIntent();
+        input = intent_hindu.getStringExtra("searchedItem");
 
         input = input.replaceAll(" ", "+").toLowerCase();
-        final_Input = "https://en.oxforddictionaries.com/definition/" + input;
+        final_Input = "http://www.thehindu.com/search/?q=" + input;
         wv = (WebView) findViewById(R.id.wv);
         // enable javascript
         wv.getSettings().setJavaScriptEnabled(true);
@@ -56,9 +59,9 @@ public class DefinitionFinal extends AppCompatActivity {
 
     }
 
-    public void DefNote(View view){
+    public void HinduNote(View view){
 
-        Intent intent = new Intent(DefinitionFinal.this,Notepage.class);
+        Intent intent = new Intent(HinduMain.this,Notepage.class);
         startActivity(intent);
 
     }

@@ -11,7 +11,9 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class DefinitionFinal extends AppCompatActivity {
+public class YoutubeFinal extends AppCompatActivity {
+
+
     String input;
     String final_Input;
     WebView wv;
@@ -27,16 +29,16 @@ public class DefinitionFinal extends AppCompatActivity {
         }
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_definition_final);
-
-        Intent intent_def = getIntent();
-        input = intent_def.getStringExtra("searchedItem");
+        setContentView(R.layout.activity_youtube_final);
+        Intent intent_youtube = getIntent();
+        input = intent_youtube.getStringExtra("searchedItem");
 
         input = input.replaceAll(" ", "+").toLowerCase();
-        final_Input = "https://en.oxforddictionaries.com/definition/" + input;
+        final_Input = "https://www.youtube.com/results?search_query=" + input;
         wv = (WebView) findViewById(R.id.wv);
         // enable javascript
         wv.getSettings().setJavaScriptEnabled(true);
@@ -53,12 +55,11 @@ public class DefinitionFinal extends AppCompatActivity {
         wv.loadUrl(final_Input);
         wv.setWebViewClient(new WebViewClient());
 
-
     }
 
-    public void DefNote(View view){
+    public void YoutubeNote(View view){
 
-        Intent intent = new Intent(DefinitionFinal.this,Notepage.class);
+        Intent intent = new Intent(YoutubeFinal.this,Notepage.class);
         startActivity(intent);
 
     }

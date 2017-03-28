@@ -49,17 +49,35 @@
             android:name=".notepad"
             android:label="@string/title_activity_notepad"
             android:theme="@style/AppTheme" />
-        <activity
-            android:name=".DefinitionFinal"
-            android:label="@string/title_activity_definition_final" />
         <activity android:name=".note" />
         <activity
-            android:name=".QuoteFinal"
-            android:label="@string/title_activity_quote_final"
+            android:name=".DefinitionFinal"
+            android:label="@string/title_activity_definition_final"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".hinduFinal"
-            android:label="@string/title_activity_hindu_final"
+            android:name=".QuotesFinal"
+            android:label="@string/title_activity_quotes_final"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ReutersFinal"
+            android:label="@string/title_activity_reuters_final"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".WikiFinal"
+            android:label="@string/title_activity_wiki_final"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".QuoraFinal"
+            android:label="@string/title_activity_quora_final"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".YoutubeFinal"
+            android:label="@string/title_activity_youtube_final"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Notepage" />
+        <activity
+            android:name=".HinduMain"
+            android:label="@string/title_activity_hindu_main"
             android:theme="@style/AppTheme"></activity>
     </application>
 
