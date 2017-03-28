@@ -30,157 +30,258 @@
         android:layout_alignTop="@+id/SearchItem"
         android:layout_alignBottom="@+id/SearchItem" />
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <LinearLayout
         android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_below="@+id/SearchItem"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="24dp">
+        xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <LinearLayout
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="0dip"
-            android:orientation="horizontal"
-            android:layout_weight="0.63" >
+            android:layout_height="match_parent">
 
-            <Button
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:id="@+id/Definition"
-                android:onClick="goto_OxfordDict"
-                android:text="Meaning"
-                android:layout_margin="5dp"
-                android:background="@drawable/search_buttons"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF" />
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:layout_weight="0.5">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:padding="7dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dicticon"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/search_buttons"
+                        android:id="@+id/Definition"
+                        android:onClick="goto_OxfordDict"
+                        android:text="Meaning"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:gravity="center|bottom"
+                        android:singleLine="false"
+                        android:paddingBottom="1sp"/>
 
-            <Button
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:id="@+id/quotes"
-                android:onClick="goto_Quotes"
-                android:text="Quotes"
-                android:background="@drawable/search_buttons"
-                android:layout_margin="5dp"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"
-                />
-        </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:padding="7dp" >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/quotes"
+                        android:layout_centerInParent="true"
+                        />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/search_buttons"
+                        android:id="@+id/quotes"
+                        android:onClick="goto_Quotes"
+                        android:text="Quotes"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:gravity="center|bottom"
+                        android:singleLine="false"
+                        android:paddingBottom="1sp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dip"
-            android:orientation="horizontal"
-            android:layout_weight="0.65" >
+                </RelativeLayout>
+            </TableRow>
 
-            <Button
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:id="@+id/reuters"
-                android:onClick="goto_Reuters"
-                android:text="Reuters"
-                android:background="@drawable/search_buttons"
-                android:layout_margin="5dp"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"/>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:layout_weight="0.5">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:padding="7sp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/reuters"
+                        android:layout_centerInParent="true"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/search_buttons"
+                        android:id="@+id/reuters"
+                        android:onClick="goto_Reuters"
+                        android:text="Reuters"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:gravity="center|bottom"
+                        android:paddingBottom="-2dp"/>
 
-            <Button
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:id="@+id/hindu"
-                android:onClick="goto_Hindu"
-                android:text="Hindu"
-                android:background="@drawable/search_buttons"
-                android:layout_margin="5dp"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"/>
-        </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:padding="7sp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/hindu"
+                        android:layout_centerInParent="true"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/search_buttons"
+                        android:id="@+id/hindu"
+                        android:onClick="goto_Hindu"
+                        android:text="hindu"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:gravity="center|bottom"
+                        android:paddingBottom="-2dp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dip"
-            android:orientation="horizontal"
-            android:layout_weight="0.65" >
+                </RelativeLayout>
+            </TableRow>
 
-            <Button
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:id="@+id/wiki"
-                android:onClick="goto_Wikipedia"
-                android:text="Wikipedia"
-                android:background="@drawable/search_buttons"
-                android:layout_margin="5dp"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"/>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:layout_weight="0.5">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:padding="7sp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/wikipedia"
+                        android:layout_centerInParent="true"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/search_buttons"
+                        android:text="wikipedia"
+                        android:id="@+id/wiki"
+                        android:onClick="goto_Wikipedia"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:gravity="center|bottom"
+                        android:paddingBottom="1sp"/>
 
-            <Button
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:id="@+id/quora"
-                android:onClick="goto_Quora"
-                android:background="@drawable/search_buttons"
-                android:layout_margin="5dp"
-                android:text="Quora"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"/>
-        </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:padding="5sp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/quora1"
+                        android:layout_centerInParent="true"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/search_buttons"
+                        android:text="Quora"
+                        android:id="@+id/quora"
+                        android:onClick="goto_Quora"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:gravity="center|bottom"
+                        android:paddingBottom="1sp"
+                        />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dip"
-            android:orientation="horizontal"
-            android:layout_weight="0.7" >
+                </RelativeLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:layout_weight="0.5">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="3sp"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/youtb1"
+                        android:layout_centerInParent="true"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/search_buttons"
+                        android:id="@+id/youtube"
+                        android:onClick="goto_Youtube"
+                        android:text="youtube"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:gravity="center|bottom"
+                        android:paddingBottom="0dp"/>
 
-            <Button
-                android:layout_width="0dip"
-                android:layout_height="91dp"
-                android:layout_weight="1"
-                android:id="@+id/youtube"
-                android:onClick="goto_Youtube"
-                android:text="YouTube"
-                android:background="@drawable/search_buttons"
-                android:layout_margin="5dp"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"
-                />
+                </RelativeLayout>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:layout_weight="0.5">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="7dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/notes1"
+                        android:layout_centerInParent="true"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/notepad"
+                        android:onClick="goto_Notepad"
+                        android:background="@drawable/search_buttons"
+                        android:text="notead"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:gravity="center|bottom"
+                        android:paddingBottom="-2dp"/>
+
+                </RelativeLayout>
+            </TableRow>
 
 
-            <Button
-                android:layout_width="0dip"
-                android:layout_height="91dp"
-                android:layout_weight="1"
-                android:id="@+id/notepad"
-                android:onClick="goto_Notepad"
-                android:text="Notepad"
-                android:background="@drawable/search_buttons"
-                android:layout_margin="5dp"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"
-                />
 
-
-        </LinearLayout>
-
+        </TableLayout>
 
     </LinearLayout>
 
 
 
 </RelativeLayout>
+
