@@ -37,7 +37,7 @@ public class Quora2 extends AppCompatActivity {
         input = intent_reuters.getStringExtra("searchedItem");
 
         input = input.replaceAll(" ", "+").toLowerCase();
-        final_Input = "http://www.reuters.com/search/news?sortBy=&dateRange=&blob=" + input;
+        final_Input = "https://www.quora.com/search?q=" + input;
         wv = (WebView) findViewById(R.id.wv);
         // enable javascript
         wv.getSettings().setJavaScriptEnabled(true);
