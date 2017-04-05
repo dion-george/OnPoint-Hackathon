@@ -61,7 +61,7 @@ public class SearchPage extends AppCompatActivity {
 
     public void goto_Quora(View view)
     {
-        Intent intent_quora = new Intent(SearchPage.this,QuoraFinal.class);
+        Intent intent_quora = new Intent(SearchPage.this,quora.class);
         intent_quora.putExtra("searchedItem",SearchedItem);
         startActivity(intent_quora);
     }
