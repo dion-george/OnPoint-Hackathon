@@ -1,4 +1,4 @@
-package com.example.dion.onpoint;
+package com.something.dion.onpoint;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

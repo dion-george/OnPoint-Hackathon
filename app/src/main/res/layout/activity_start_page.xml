@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true"
-    tools:context="com.example.dion.onpoint.StartPage"
+    tools:context="com.something.dion.onpoint.StartPage"
     android:background="@drawable/back">
 
     <ImageView
