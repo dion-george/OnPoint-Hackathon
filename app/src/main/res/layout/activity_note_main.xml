@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:id="@+id/tv1"
+    android:text="Saved notes: -"
+    android:textSize="30sp"
+    android:paddingLeft="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/tv1"
+        android:id="@+id/black"
+        android:background="#000000"/>
+
+<ListView android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#ffffff"
+android:layout_below="@+id/black"
+    android:id="@+id/listView"
+    android:headerDividersEnabled="false"
+    android:scrollbarSize="30dp">
+
+</ListView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/action_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@android:drawable/ic_menu_edit"
+        android:onClick="newNote"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin" />
+
+</RelativeLayout>

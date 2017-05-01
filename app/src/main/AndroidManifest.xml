@@ -25,27 +25,6 @@
             android:name=".SearchPage"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Definition"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".quotes"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".wikipedia"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".quora"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".reuters"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".youtube"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".hindu"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".notepad"
             android:label="@string/title_activity_notepad"
             android:theme="@style/AppTheme" />
@@ -69,7 +48,6 @@
             android:name=".YoutubeFinal"
             android:label="@string/title_activity_youtube_final"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Notepage" />
         <activity
             android:name=".HinduMain"
             android:label="@string/title_activity_hindu_main"
@@ -77,7 +55,10 @@
         <activity
             android:name=".Quora2"
             android:label="@string/title_activity_quora2"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".NoteMain" />
+        <activity android:name=".ENote" />
+        <activity android:name=".NewNote"></activity>
     </application>
 
 </manifest>
