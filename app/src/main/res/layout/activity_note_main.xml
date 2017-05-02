@@ -4,7 +4,7 @@
     android:background="#ffffff">
 <TextView
     android:layout_width="match_parent"
-    android:layout_height="40dp"
+    android:layout_height="42dp"
     android:id="@+id/tv1"
     android:text="Saved notes: -"
     android:textSize="30sp"
