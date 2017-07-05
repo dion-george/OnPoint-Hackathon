@@ -1,14 +1,11 @@
 package com.something.dion.onpoint;
 
 import android.content.Context;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.ListView;
 
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
@@ -20,69 +17,86 @@ public class ENote extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_enote);
+        setContentView(R.layout.activity_e_note);
 
         //Set the editText with text from notesArray that is text from a old note
         EditText editText = (EditText)findViewById(R.id.text_editor2);
-        editText.setText(NoteMain.notesArray.get(NoteMain.itemNumber));
+        editText.setText(Notes.notesArray.get(Notes.itemNumber));
 
 
     }
 
-
-    public void discardNote(View view){
-        NoteMain.notesArray.remove(NoteMain.itemNumber);
-        NoteMain.displayArray.remove(NoteMain.itemNumber);
-
-        NoteMain.theListView.setAdapter(NoteMain.theAdapter);
-
-        try {
-            FileOutputStream fileOutputStream = openFileOutput("noteSaves", Context.MODE_PRIVATE);
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-
-            objectOutputStream.writeObject(NoteMain.notesArray);
-            objectOutputStream.close();
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-        finish();
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu2) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_e_note, menu2);
+        return true;
     }
 
-    public void saveNote(View view){
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
 
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_discardNote2) {
 
-        //Get text from user input in the EditText and add it to the listview using adapter
-        EditText editText = (EditText)findViewById(R.id.text_editor2);
-        String theText = (String)editText.getText().toString();
+            Notes.notesArray.remove(Notes.itemNumber);
+            Notes.displayArray.remove(Notes.itemNumber);
 
-        //set updated note to notes Array
-        NoteMain.notesArray.set(NoteMain.itemNumber, theText);
+            Notes.theListView.setAdapter(Notes.theAdapter);
 
-        //set updated note up to newline to display array
-        String[] beforeNewline = theText.split("\n", 20);
-        NoteMain.displayArray.set(NoteMain.itemNumber,beforeNewline[0]);
+            try {
+                FileOutputStream fileOutputStream = openFileOutput("noteSaves", Context.MODE_PRIVATE);
+                ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
 
-        //update the listview on main activity
-        NoteMain.theListView.setAdapter(NoteMain.theAdapter);
-
-        //write notesArray to memory
-        try {
-            FileOutputStream fileOutputStream = openFileOutput("noteSaves", Context.MODE_PRIVATE);
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-
-            objectOutputStream.writeObject(NoteMain.notesArray);
-            objectOutputStream.close();
+                objectOutputStream.writeObject(Notes.notesArray);
+                objectOutputStream.close();
+            }
+            catch(Exception e)
+            {
+                e.printStackTrace();
+            }
+            finish();
         }
-        catch(Exception e)
-        {
-            e.printStackTrace();
+        if (id == R.id.action_saveNote2) {
+
+
+            //Get text from user input in the EditText and add it to the listview using adapter
+            EditText editText = (EditText)findViewById(R.id.text_editor2);
+            String theText = (String)editText.getText().toString();
+
+            //set updated note to notes Array
+            Notes.notesArray.set(Notes.itemNumber, theText);
+
+            //set updated note up to newline to display array
+            String[] beforeNewline = theText.split("\n", 20);
+            Notes.displayArray.set(Notes.itemNumber,beforeNewline[0]);
+
+            //update the listview on main activity
+            Notes.theListView.setAdapter(Notes.theAdapter);
+
+            //write notesArray to memory
+            try {
+                FileOutputStream fileOutputStream = openFileOutput("noteSaves", Context.MODE_PRIVATE);
+                ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+
+                objectOutputStream.writeObject(Notes.notesArray);
+                objectOutputStream.close();
+            }
+            catch(Exception e)
+            {
+                e.printStackTrace();
+            }
+
+            finish();
+
         }
 
-        finish();
 
+
+        return super.onOptionsItemSelected(item);
     }
-
-
 }

@@ -60,7 +60,7 @@ public class WikiFinal extends AppCompatActivity {
 
     public void WikiNote(View view){
 
-        Intent intent = new Intent(WikiFinal.this,notepad.class);
+        Intent intent = new Intent(WikiFinal.this,Notes.class);
         startActivity(intent);
 
     }

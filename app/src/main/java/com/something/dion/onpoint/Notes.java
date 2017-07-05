@@ -1,5 +1,5 @@
+//dedefish@ncsu.edu
 package com.something.dion.onpoint;
-
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -17,10 +17,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class NoteMain extends ActionBarActivity {
+public class Notes extends ActionBarActivity {
 
-    static ArrayList<String> notesArray = new ArrayList<String>();
-    static ArrayList<String> displayArray = new ArrayList<String>();
+    public static ArrayList<String> notesArray = new ArrayList<String>();
+    public static ArrayList<String> displayArray = new ArrayList<String>();
     static ListAdapter theAdapter;
     static ListView theListView;
     static int itemNumber;
@@ -28,7 +28,7 @@ public class NoteMain extends ActionBarActivity {
     //Get everything ready
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_note_main);
+        setContentView(R.layout.activity_notes);
 
         try {
             FileInputStream fileInputStream = openFileInput("noteSaves");
@@ -62,18 +62,48 @@ public class NoteMain extends ActionBarActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 
                 itemNumber = position;
-                Intent intent = new Intent(NoteMain.this, ENote.class);
+                Intent intent = new Intent(Notes.this, ENote.class);
                 startActivity(intent);
             }
         });
 
 
-    }
-
-    public void newNote (View view) {
-        Intent intent = new Intent(this, NewNote.class);
-        startActivity(intent);
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+
+        if (id == R.id.action_new) {
+
+            Intent intent = new Intent(this, NewNote.class);
+            startActivity(intent);
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onDestroy() {
+        notesArray.clear();
+        displayArray.clear();
+        super.onDestroy();
+    }
+
+
 
 }

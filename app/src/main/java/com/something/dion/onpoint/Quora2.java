@@ -60,7 +60,7 @@ public class Quora2 extends AppCompatActivity {
 
     public void quoranote(View view){
 
-        Intent intent = new Intent(Quora2.this,notepad.class);
+        Intent intent = new Intent(Quora2.this,Notes.class);
         startActivity(intent);
 
     }

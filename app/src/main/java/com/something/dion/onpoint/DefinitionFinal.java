@@ -64,7 +64,7 @@ public class DefinitionFinal extends AppCompatActivity {
 
     public void DefNote(View view){
 
-        Intent intent = new Intent(DefinitionFinal.this,notepad.class);
+        Intent intent = new Intent(DefinitionFinal.this,Notes.class);
         startActivity(intent);
 
     }
