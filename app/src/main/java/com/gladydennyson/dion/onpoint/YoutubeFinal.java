@@ -1,4 +1,4 @@
-package com.something.dion.onpoint;
+package com.gladydennyson.dion.onpoint;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +11,12 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class HinduMain extends AppCompatActivity {
+public class YoutubeFinal extends AppCompatActivity {
 
-   private String input;
 
-    String final_Input;
+    String input;
+    String var="hello";
+    private String final_Input;
     WebView wv;
 
     //when back pressed go back.
@@ -30,17 +31,15 @@ public class HinduMain extends AppCompatActivity {
     }
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hindu_main);
-        Intent intent_hindu = getIntent();
-        input = intent_hindu.getStringExtra("searchedItem");
+        setContentView(R.layout.activity_youtube_final);
+        Intent intent_youtube = getIntent();
+        input = intent_youtube.getStringExtra("searchedItem");
 
         input = input.replaceAll(" ", "+").toLowerCase();
-        final_Input = "http://www.thehindu.com/search/?q=" + input;
+        final_Input = "https://www.youtube.com/results?search_query=" + input;
         wv = (WebView) findViewById(R.id.wv);
         // enable javascript
         wv.getSettings().setJavaScriptEnabled(true);
@@ -57,12 +56,11 @@ public class HinduMain extends AppCompatActivity {
         wv.loadUrl(final_Input);
         wv.setWebViewClient(new WebViewClient());
 
-
     }
 
-    public void HinduNote(View view){
+    public void YoutubeNote(View view){
 
-        Intent intent = new Intent(HinduMain.this,Notes.class);
+        Intent intent = new Intent(YoutubeFinal.this,Notes.class);
         startActivity(intent);
 
     }

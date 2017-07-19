@@ -1,4 +1,4 @@
-package com.something.dion.onpoint;
+package com.gladydennyson.dion.onpoint;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,12 +11,12 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class WikiFinal extends AppCompatActivity {
-
-    String input;
-    String var="hello";
-    private String final_Input;
+public class DefinitionFinal extends AppCompatActivity {
+    private String input;
+    String final_Input;
     WebView wv;
+
+
 
     //when back pressed go back.
     @Override
@@ -29,17 +29,16 @@ public class WikiFinal extends AppCompatActivity {
         }
     }
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wiki_final);
-        Intent intent_wiki = getIntent();
-        input = intent_wiki.getStringExtra("searchedItem");
+        setContentView(R.layout.activity_definition_final);
 
-        input = input.replaceAll(" ", "_").toLowerCase();
-        final_Input = "https://en.wikipedia.org/wiki/" + input;
+        Intent intent_def = getIntent();
+        input = intent_def.getStringExtra("searchedItem");
+
+        input = input.replaceAll(" ", "+").toLowerCase();
+        final_Input = "https://en.oxforddictionaries.com/definition/" + input;
         wv = (WebView) findViewById(R.id.wv);
         // enable javascript
         wv.getSettings().setJavaScriptEnabled(true);
@@ -56,11 +55,16 @@ public class WikiFinal extends AppCompatActivity {
         wv.loadUrl(final_Input);
         wv.setWebViewClient(new WebViewClient());
 
+
+
+
+
+
     }
 
-    public void WikiNote(View view){
+    public void DefNote(View view){
 
-        Intent intent = new Intent(WikiFinal.this,Notes.class);
+        Intent intent = new Intent(DefinitionFinal.this,Notes.class);
         startActivity(intent);
 
     }

@@ -3,14 +3,14 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         config {
-            keyAlias 'Glady'
-            keyPassword 'donydion'
+            keyAlias 'app'
+            keyPassword '1829@dion'
         }
     }
     compileSdkVersion 23
     buildToolsVersion '25.0.0'
     defaultConfig {
-        applicationId "com.something.dion.onpoint"
+        applicationId "com.gladydennyson.dion.onpoint"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 3

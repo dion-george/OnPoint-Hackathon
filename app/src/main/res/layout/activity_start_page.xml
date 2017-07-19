@@ -9,18 +9,18 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true"
-    tools:context="com.something.dion.onpoint.StartPage"
+    tools:context="com.gladydennyson.dion.onpoint.StartPage"
     android:background="@drawable/back">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/logo"
-        android:src="@drawable/logox"
+        android:src="@drawable/logo_big"
 
+        android:layout_marginBottom="20dp"
         android:layout_above="@+id/enterWord"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"/>
+        android:layout_centerHorizontal="true" />
 
 
     <EditText
@@ -30,10 +30,14 @@
         android:textSize="19sp"
         android:background="@drawable/focus_border"
         android:paddingLeft="7dp"
+        android:paddingRight="60dp"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:maxLines="1"/>
+        android:maxLines="1"
+        android:inputType="text"
+        android:imeOptions="actionSearch"
+        />
 
     <ImageButton
         android:layout_width="wrap_content"

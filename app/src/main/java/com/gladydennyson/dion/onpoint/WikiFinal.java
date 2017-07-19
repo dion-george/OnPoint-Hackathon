@@ -1,4 +1,4 @@
-package com.something.dion.onpoint;
+package com.gladydennyson.dion.onpoint;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +11,11 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class QuotesFinal extends AppCompatActivity {
+public class WikiFinal extends AppCompatActivity {
 
-
-    private String input;
-    String final_Input;
+    String input;
+    String var="hello";
+    private String final_Input;
     WebView wv;
 
     //when back pressed go back.
@@ -30,16 +30,16 @@ public class QuotesFinal extends AppCompatActivity {
     }
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quotes_final);
+        setContentView(R.layout.activity_wiki_final);
+        Intent intent_wiki = getIntent();
+        input = intent_wiki.getStringExtra("searchedItem");
 
-        Intent intent_quotes = getIntent();
-        input = intent_quotes.getStringExtra("searchedItem");
-
-        input = input.replaceAll(" ", "+").toLowerCase();
-        final_Input = "https://www.brainyquote.com/search_results.html?q=" + input;
+        input = input.replaceAll(" ", "_").toLowerCase();
+        final_Input = "https://en.wikipedia.org/wiki/" + input;
         wv = (WebView) findViewById(R.id.wv);
         // enable javascript
         wv.getSettings().setJavaScriptEnabled(true);
@@ -58,11 +58,12 @@ public class QuotesFinal extends AppCompatActivity {
 
     }
 
-    public void QuoteNote(View view){
+    public void WikiNote(View view){
 
-        Intent intent = new Intent(QuotesFinal.this,Notes.class);
+        Intent intent = new Intent(WikiFinal.this,Notes.class);
         startActivity(intent);
 
     }
+
 
 }

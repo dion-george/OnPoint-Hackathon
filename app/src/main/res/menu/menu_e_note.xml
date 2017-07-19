@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools" tools:context="com.something.dion.onpoint">
+xmlns:tools="http://schemas.android.com/tools" tools:context="com.gladydennyson.dion.onpoint">
 
 
     <item android:id="@+id/action_saveNote2"

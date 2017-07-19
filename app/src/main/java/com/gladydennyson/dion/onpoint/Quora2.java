@@ -1,4 +1,4 @@
-package com.something.dion.onpoint;
+package com.gladydennyson.dion.onpoint;
 
 import android.content.Intent;
 import android.os.Bundle;

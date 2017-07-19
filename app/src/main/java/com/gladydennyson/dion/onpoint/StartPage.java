@@ -1,4 +1,4 @@
-package com.something.dion.onpoint;
+package com.gladydennyson.dion.onpoint;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,9 +6,11 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class StartPage extends AppCompatActivity {
 
@@ -21,6 +23,27 @@ public class StartPage extends AppCompatActivity {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
     }
+
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event){
+//        switch (keyCode){
+//            case KeyEvent.KEYCODE_DPAD_CENTER:
+//            case KeyEvent.KEYCODE_ENTER:
+//                makeToast("key pressed");
+//                return true;
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
+//
+//    private void makeToast(String message){
+//        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+//    }
+
+
+
+
+
+
 
     private String displayInput() {
         EditText editText = (EditText) findViewById(R.id.enterWord);

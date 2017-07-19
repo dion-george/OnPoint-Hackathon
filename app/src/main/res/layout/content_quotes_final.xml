@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.something.dion.onpoint.QuotesFinal"
+    tools:context="com.gladydennyson.dion.onpoint.QuotesFinal"
     tools:showIn="@layout/activity_quotes_final">
 
     <WebView

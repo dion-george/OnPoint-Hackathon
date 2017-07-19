@@ -1,4 +1,4 @@
-package com.something.dion.onpoint;
+package com.gladydennyson.dion.onpoint;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -21,7 +21,7 @@ public class ENote extends ActionBarActivity {
 
         //Set the editText with text from notesArray that is text from a old note
         EditText editText = (EditText)findViewById(R.id.text_editor2);
-        editText.setText(Notes.notesArray.get(Notes.itemNumber));
+        editText.setText(com.gladydennyson.dion.onpoint.Notes.notesArray.get(Notes.itemNumber));
 
 
     }

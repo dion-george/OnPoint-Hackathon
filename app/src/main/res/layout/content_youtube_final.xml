@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.something.dion.onpoint.YoutubeFinal"
+    tools:context="com.gladydennyson.dion.onpoint.YoutubeFinal"
     tools:showIn="@layout/activity_youtube_final">
 
     <WebView
